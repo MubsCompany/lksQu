@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.lksqu.R
 import com.example.lksqu.adapter.ListMateriAdapter
-import kotlinx.android.synthetic.main.fragment_list_materi.*
 
 class ListMateriFragment : Fragment() {
 
@@ -27,8 +27,10 @@ class ListMateriFragment : Fragment() {
 
         val inflate = inflater.inflate(R.layout.fragment_list_materi, container, false)
 
-        rv_list_materi.layoutManager = LinearLayoutManager(requireContext())
-        rv_list_materi.adapter = ListMateriAdapter(kotlin.collections.listOf("data", "data1", "data2"))
+        val recyclerView = inflate.findViewById<RecyclerView>(R.id.rv_list_materi)
+
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = ListMateriAdapter(kotlin.collections.listOf("data", "data1", "data2"))
 
         return inflate
     }

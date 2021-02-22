@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
 // mengganti isi container dengan fragment baru
 // mengganti isi container dengan fragment baru
-        ft.replace(R.id.content, ListMateriFragment())
+        ft.replace(R.id.content, HomeFragment())
 // atau ft.add(R.id.your_placeholder, new FooFragment());
 // mulai melakukan hal di atas (jika belum di commit maka proses di atas belum dimulai)
 // atau ft.add(R.id.your_placeholder, new FooFragment());

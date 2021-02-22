@@ -8,22 +8,26 @@ import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.RecyclerView
 import com.example.lksqu.R
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
 
-        card_pelajaran_1.setOnClickListener {
+        // Inflate the layout for this fragment
+        val inflate = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val card1 = inflate.findViewById<ConstraintLayout>(R.id.card_pelajaran_1)
+
+        card1.setOnClickListener {
             val ft: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-            ft.replace(R.id.content, ProfileFragment())
+            ft.replace(R.id.content, ListMateriFragment())
             ft.commit()
         }
 
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflate
     }
 
     companion object {
