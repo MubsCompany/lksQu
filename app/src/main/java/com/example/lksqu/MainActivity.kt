@@ -1,48 +1,43 @@
 package com.example.lksqu
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.example.lksqu.fragment.BottomSheetFragment
-import com.example.lksqu.fragment.HomeFragment
-import com.example.lksqu.fragment.ListMateriFragment
-import com.example.lksqu.fragment.LoginFragment
+import com.example.lksqu.fragment.*
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
     private var content: FrameLayout? = null
 
-//    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-//        when (item.itemId) {
-//            R.id.navigation_home -> {
-//                val fragment = HomeFragment.newInstance()
-//                addFragment(fragment)
-//                return@OnNavigationItemSelectedListener true
-//            }
-//
-//            R.id.navigation_schedule -> {
-//                val fragment = ScheduleFragment()
-//                addFragment(fragment)
-//                return@OnNavigationItemSelectedListener true
-//            }
-//
-//            R.id.navigation_profile -> {
-//                val fragment = ProfileFragment()
-//                addFragment(fragment)
-//                return@OnNavigationItemSelectedListener true
-//            }
-//        }
-//        false
-//    }
+    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { it ->
+        when (it.itemId) {
+            R.id.navigation_home -> {
+                moveToFragment(HomeFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_schedule -> {
+                moveToFragment(ScheduleFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.navigation_profile -> {
+                it.isChecked = false
+                moveToFragment(ProfileFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+        }
+        false
+    }
 
-//    private fun addFragment(fragment: Fragment) {
-//        supportFragmentManager
-//            .beginTransaction()
-//            .setCustomAnimations(R.anim.design_bottom_sheet_slide_in, R.anim.design_bottom_sheet_slide_out)
-//            .replace(R.id.content, fragment, fragment.javaClass.getSimpleName())
-//            .commit()
-//    }
+    private fun moveToFragment(fragment: Fragment) {
+        val fragmentTrans = supportFragmentManager.beginTransaction()
+            .setCustomAnimations(R.anim.design_bottom_sheet_slide_in, R.anim.design_bottom_sheet_slide_out)
+        fragmentTrans.replace(R.id.content, fragment)
+        fragmentTrans.commit()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,16 +49,11 @@ class MainActivity : AppCompatActivity() {
         val bottomSheetFragment = BottomSheetFragment()
 //        bottomSheetFragment.show()
 
-        // Memulai transaksi
-        // Memulai transaksi
+        val navView: BottomNavigationView = findViewById(R.id.navigation)
+        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
         val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
-// mengganti isi container dengan fragment baru
-// mengganti isi container dengan fragment baru
         ft.replace(R.id.content, HomeFragment())
-// atau ft.add(R.id.your_placeholder, new FooFragment());
-// mulai melakukan hal di atas (jika belum di commit maka proses di atas belum dimulai)
-// atau ft.add(R.id.your_placeholder, new FooFragment());
-// mulai melakukan hal di atas (jika belum di commit maka proses di atas belum dimulai)
         ft.commit()
 
     }

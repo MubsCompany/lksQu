@@ -8,7 +8,17 @@
     android:background="#AEBFA0"
     tools:context=".fragment.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/ic_logout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@drawable/shutdown_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -16,7 +26,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
-        android:text="hay ajg,"
+        android:text="Selamat datang,"
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -30,7 +40,7 @@
         android:layout_marginTop="16dp"
         android:text="hapis"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -39,202 +49,183 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sunday, 26 Januari 2020"
+        android:text="have a nice day"
         android:textColor="@android:color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="24dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="20dp">
+        android:layout_height="600dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bekgron"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/card_pelajaran_1"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F6F5EF">
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:text="Bahasa Arab"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_pelajaran_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F6F5EF">
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Fiqih"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        tools:layout_editor_absoluteX="20dp">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/card_pelajaran_2"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F6F5EF">
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            tools:layout_editor_absoluteX="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:text="Bahasa Arab"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_pelajaran_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F6F5EF">
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Aqidah"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2"
-        tools:layout_editor_absoluteX="20dp">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/card_pelajaran_3"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F6F5EF">
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2"
+            tools:layout_editor_absoluteX="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:text="Bahasa Arab"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_pelajaran_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F6F5EF">
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Bahasa Arab"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        tools:layout_editor_absoluteX="20dp">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/card_pelajaran_4"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F6F5EF">
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3"
+            tools:layout_editor_absoluteX="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:text="Bahasa Arab"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_pelajaran_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F6F5EF">
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Bahasa Arab"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4"
-        tools:layout_editor_absoluteX="20dp">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/card_pelajaran_5"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F6F5EF">
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4"
+            tools:layout_editor_absoluteX="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:text="Bahasa Arab"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_pelajaran_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F6F5EF">
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="Bahasa Arab"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5"
-        tools:layout_editor_absoluteX="20dp">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/card_pelajaran_6"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F6F5EF">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:text="Bahasa Arab"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

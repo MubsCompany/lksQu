@@ -23,6 +23,7 @@
             android:background="#F6F5EF">
 
             <TextView
+                android:id="@+id/tv_title_materi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -49,6 +50,7 @@
             android:background="#F6F5EF">
 
             <TextView
+                android:id="@+id/tv_value_materi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
